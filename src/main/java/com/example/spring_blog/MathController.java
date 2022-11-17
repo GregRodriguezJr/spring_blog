@@ -23,5 +23,12 @@ public class MathController {
         return num2 + " - " + num1 + " = " + sum;
     }
 
+    @RequestMapping(path = "/multiply/{num1}/and/{num2}", method = RequestMethod.GET)
+    @ResponseBody
+    public String multiply(@PathVariable int num1, @PathVariable int num2) {
+        int sum = num1 * num2;
+        return num1 + " x " + num2 + " = " + sum;
+    }
+
 
 }
