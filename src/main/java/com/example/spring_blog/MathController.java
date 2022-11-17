@@ -30,5 +30,11 @@ public class MathController {
         return num1 + " x " + num2 + " = " + sum;
     }
 
+    @RequestMapping(path = "/divide/{num1}/by/{num2}", method = RequestMethod.GET)
+    @ResponseBody
+    public String divide(@PathVariable int num1, @PathVariable int num2) {
+        int sum = num1 / num2;
+        return num1 + " / " + num2 + " = " + sum;
+    }
 
 }
