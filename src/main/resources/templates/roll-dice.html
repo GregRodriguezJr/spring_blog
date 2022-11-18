@@ -6,7 +6,7 @@
     <th:block th:replace="/fragments/BSCDN.html :: head"></th:block>
 </head>
 <body>
-
+    <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
     <div class="container">
         <h5>Guess a number between 1 - 6</h5>
         <ul>
@@ -23,6 +23,8 @@
         <p th:if="${result == true}">You guess correctly!</p>
         <p th:if="${result == false}">You guess wrong!</p>
     </div>
+
+    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
 
     <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
 </body>
