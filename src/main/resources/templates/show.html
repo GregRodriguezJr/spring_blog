@@ -8,6 +8,11 @@
 <body>
     <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
 
+    <div class="container">
+        <p>This is an individual post</p>
+        <p>Post ID: <span th:text="${postId}"></span></p>
+    </div>
+
     <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
 
     <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
