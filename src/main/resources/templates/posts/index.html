@@ -8,6 +8,17 @@
 <body>
     <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
 
+    <div class="container">
+        <!--Bootstrap card-->
+        <div th:each="post: ${allPost}" class="card w-75" style="margin: 0 auto;">
+            <div class="card-body">
+                <h5 th:text="${post.title}" class="card-title"></h5>
+                <p th:text="${post.body}" class="card-text"></p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+        </div>
+    </div>
+
     <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
 
     <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
