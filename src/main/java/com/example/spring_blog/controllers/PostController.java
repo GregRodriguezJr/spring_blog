@@ -1,5 +1,6 @@
 package com.example.spring_blog.controllers;
 
+import com.example.spring_blog.models.Post;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,13 +10,17 @@ public class PostController {
 
     @GetMapping("/posts")
     public String AllPosts() {
-        return "index";
+        return "posts/index";
     }
 
     @GetMapping("/posts/{id}")
     public String post(@PathVariable long id, Model model) {
+
+        Post myPost = new Post(id,"Five potluck ideas", "example 1, example 2...");
+
+        model.addAttribute("myPost", myPost);
         model.addAttribute("postId", id);
-        return "show";
+        return "posts/show";
     }
 
     @GetMapping("/posts/create")

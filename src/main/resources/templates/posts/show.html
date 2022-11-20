@@ -9,7 +9,8 @@
     <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
 
     <div class="container">
-        <p>This is an individual post</p>
+        <h1 th:text="${myPost.title}"></h1>
+        <p th:text="${myPost.body}"></p>
         <p>Post ID: <span th:text="${postId}"></span></p>
     </div>
 
