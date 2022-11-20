@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+    <th:block th:replace="/fragments/BSCDN.html :: head"></th:block>
+</head>
+<body>
+    <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
+
+    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
+
+    <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
+</body>
+</html>
