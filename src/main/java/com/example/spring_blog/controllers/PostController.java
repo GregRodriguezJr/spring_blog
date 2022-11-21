@@ -56,8 +56,11 @@ public class PostController {
     }
 
     @PostMapping("/posts/create")
-    @ResponseBody
-    public String createPost() {
-        return "create a new post";
+    public String createPost(@RequestParam(name = "title") String title, @RequestParam(name = "body") String body, Model model) {
+        Post post = new Post();
+        post.setTitle(title);
+        post.setBody(body);
+        postDao.save(post);
+        return "redirect:/posts";
     }
 }
