@@ -1,6 +1,7 @@
 package com.example.spring_blog.controllers;
 
 import com.example.spring_blog.models.Post;
+import com.example.spring_blog.repositories.PostRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -9,6 +10,12 @@ import java.util.ArrayList;
 
 @Controller
 public class PostController {
+
+    private final PostRepository adDao;
+
+    public PostController(PostRepository adDao) {
+        this.adDao = adDao;
+    }
 
     @GetMapping("/posts")
     public String AllPosts(Model model) {
