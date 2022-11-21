@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Title</title>
+    <title>All Post</title>
     <th:block th:replace="/fragments/BSCDN.html :: head"></th:block>
 </head>
 <body>
@@ -14,12 +14,12 @@
             <div class="card-body">
                 <h5 th:text="${post.title}" class="card-title"></h5>
                 <p th:text="${post.body}" class="card-text"></p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="btn btn-primary">See Post</a>
             </div>
         </div>
     </div>
 
-    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
+<!--    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>-->
 
     <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
 </body>
