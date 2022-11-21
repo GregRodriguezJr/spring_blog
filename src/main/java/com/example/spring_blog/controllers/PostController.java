@@ -11,10 +11,10 @@ import java.util.ArrayList;
 @Controller
 public class PostController {
 
-    private final PostRepository adDao;
+    private final PostRepository postDao;
 
-    public PostController(PostRepository adDao) {
-        this.adDao = adDao;
+    public PostController(PostRepository postDao) {
+        this.postDao = postDao;
     }
 
     @GetMapping("/posts")

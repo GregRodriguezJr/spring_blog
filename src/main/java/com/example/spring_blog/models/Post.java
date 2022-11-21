@@ -3,6 +3,7 @@ package com.example.spring_blog.models;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "posts")
 public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
