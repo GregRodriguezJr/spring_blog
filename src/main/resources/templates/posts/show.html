@@ -9,12 +9,13 @@
     <nav th:replace="/fragments/navbar_footer.html :: navbar"></nav>
 
     <div class="container">
-        <h1 th:text="${myPost.title}"></h1>
-        <p th:text="${myPost.body}"></p>
-        <p>Post ID: <span th:text="${postId}"></span></p>
+        <h1 th:text="${post.title}"></h1>
+        <p th:text="${post.body}"></p>
+        <p>Post ID: <span th:text="${post.id}"></span></p>
+        <p th:text="${post.user.email}"></p>
     </div>
 
-    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>
+<!--    <footer th:replace="/fragments/navbar_footer.html :: footer"></footer>-->
 
     <th:block th:replace="/fragments/BSCDN.html :: script"></th:block>
 </body>
