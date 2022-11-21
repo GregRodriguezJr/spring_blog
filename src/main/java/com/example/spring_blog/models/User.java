@@ -21,7 +21,7 @@ public class User {
     private String password;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "user")
-    private List<Post> userPosts;
+    private List<Post> post;
 
     public User(){}
 
