@@ -51,9 +51,8 @@ public class PostController {
     }
 
     @GetMapping("/posts/create")
-    @ResponseBody
     public String createPostForm() {
-        return "view the form for creating a post";
+        return "posts/create";
     }
 
     @PostMapping("/posts/create")
