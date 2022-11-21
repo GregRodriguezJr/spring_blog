@@ -1,8 +1,16 @@
 package com.example.spring_blog.models;
 
+import jakarta.persistence.*;
+
+@Entity
 public class Post {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(nullable = false)
     private String title;
+    @Column(nullable = false)
     private String body;
 
     public Post(){}
