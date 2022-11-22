@@ -14,11 +14,11 @@
         <form th:method="post" th:action="@{/posts/create}" th:object="${post}">
             <div class="form-group my-3">
                 <label for="title">Title</label>
-                <input type="text" class="form-control" id="title" aria-describedby="title" placeholder="Enter new post title">
+                <input type="text" class="form-control" id="title" aria-describedby="title" th:attr="placeholder=${post.title}">
             </div>
             <div class="form-group my-3">
                 <label for="body">Body</label>
-                <textarea class="form-control" id="body" rows="5" placeholder="Enter new post body"></textarea>
+                <textarea class="form-control" id="body" rows="5" th:attr="placeholder=${post.body}"></textarea>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
